@@ -4,7 +4,7 @@ public class App {
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
         System.out.println(
-                "Добро пожаловать в примитивный калькулятор! \nЧтобы завершить работу напишите 'стоп'\nЧтобы продолжить - энтер");
+                "Добро пожаловать в примитивный калькулятор! \nЧтобы завершить работу напишите 'stop'\nЧтобы продолжить - энтер");
 
         String stop = " ";
         double res = 0;
