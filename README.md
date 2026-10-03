@@ -1,18 +1,13 @@
-## Getting Started
+# Console Calculator (Java)
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Простой консольный калькулятор, написанный на Java в рамках изучения базовых конструкций языка и работы с системой контроля версий Git.
 
-## Folder Structure
+## Возможности
+* Сложение (`+`)
+* Вычитание (`-`)
+* Умножение (`*`)
+* Деление (`/`) с базовой защитой от деления на ноль
 
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## Стек технологий
+* **Язык:** Java 21
+* **Инструменты:** Antigravity IDE / VS Code, Git
