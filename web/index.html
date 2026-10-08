@@ -17,21 +17,26 @@
             <button class="b num" onclick="appendNumber('1')">1</button>
             <button class="b num" onclick="appendNumber('2')">2</button>
             <button class="b num" onclick="appendNumber('3')">3</button>
-            <button class="b Clear" onclick="clearDisplay()">C</button>
+            <button class="b Clear" onclick="clearDisplay()">AC</button>
+
             <button class="b num" onclick="appendNumber('4')">4</button>
             <button class="b num" onclick="appendNumber('5')">5</button>
             <button class="b num" onclick="appendNumber('6')">6</button>
             <button class="b num" onclick="appendNumber('0')">0</button>
+
             <button class="b num" onclick="appendNumber('7')">7</button>
             <button class="b num" onclick="appendNumber('8')">8</button>
             <button class="b num" onclick="appendNumber('9')">9</button>
+            <button class="b Clear" onclick="clearSingle()">C</button>
+
+            <button class="b Op" onclick="appendOperator1('+')">+</button>
+            <button class="b Op" onclick="appendOperator2('*')">*</button>
+            <button class="b Op" onclick="appendOperator1('.')">.</button>
             <button class="b Eq" onclick="calculateResult()">=</button>
-            <button class="b Op" onclick="appendOperator('+')">+</button>
-            <button class="b Op" onclick="appendOperator('-')">-</button>
-            <button class="b Op" onclick="appendOperator('*')">*</button>
-            <button class="b Op" onclick="appendOperator('/')">/</button>
 
-
+            <button class="b Op" onclick="appendOperator1('-')">-</button>
+            <button class="b Op" onclick="appendOperator2('/')">/</button>
+            <button class="b Op" onclick="appendOperator2('%')">%</button>
         </div>
     </div>
 

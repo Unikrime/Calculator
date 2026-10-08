@@ -1,16 +1,27 @@
 const display = document.getElementById('display');
+const errors = ["Неверное выражение", "Infinity", "undefined"];
+const operators = ["+", "-", "*", "/", ".", "%"];
 
-function appendNumber(input) {
-    if (display.value == "Неверное выражение" || display.value == "Infinity") {
+function removeText() {
+    if (errors.includes(display.value)) {
         display.value = "";
     }
+}
+function appendNumber(input) {
+    removeText();
     display.value += input;
 }
-function appendOperator(input) {
-    if (display.value == "Неверное выражение" || display.value == "Infinity") {
-        display.value = "";
+function appendOperator1(input) {
+    removeText();
+    if (!operators.includes(display.value.slice(-1))) {
+        display.value += input;
     }
-    display.value += input;
+}
+function appendOperator2(input) {
+    removeText();
+    if (display.value != "" && !operators.includes(display.value.slice(-1))) {
+        display.value += input;
+    }
 }
 function clearDisplay() {
     display.value = "";
@@ -21,4 +32,7 @@ function calculateResult() {
     } catch (error) {
         display.value = "Неверное выражение"
     }
+}
+function clearSingle() {
+    display.value = display.value.slice(0, -1);
 }

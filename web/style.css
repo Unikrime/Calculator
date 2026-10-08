@@ -45,7 +45,7 @@ body {
     align-items: center;
     margin: 10%;
     width: 300px;
-    height: 350px;
+    height: auto;
     background-color: #58696e;
     padding: 20px;
     border: none;
@@ -105,4 +105,18 @@ body {
 .b:active {
     background-color: #4c6ca1;
     transition: 0s;
+}
+
+.Eq {
+    grid-row: span 2;
+    height: 100%;
+    background-color: #d1ffe9;
+}
+
+.Clear {
+    background-color: #ffeed1;
+}
+
+.Op {
+    background-color: #b8b0bf;
 }
