@@ -52,8 +52,10 @@ function calculateResult() {
     hasDot = display.value.includes('.');
 }
 function clearSingle() {
-    if (display.value.slice(-1) == ".") {
-        hasDot = false;
+    if (!errors.includes(display.value)) {
+        if (display.value.slice(-1) == ".") {
+            hasDot = false;
+        }
+        display.value = display.value.slice(0, -1);
     }
-    display.value = display.value.slice(0, -1);
 }
