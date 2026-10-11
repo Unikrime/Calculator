@@ -111,7 +111,8 @@ body {
     transition: 0.1s ease, background-color 0.5s;
 }
 
-.b:active {
+.b:active,
+.b.active {
     background-color: #4c6ca1;
     transition: 0s;
 }

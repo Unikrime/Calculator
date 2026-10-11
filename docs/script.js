@@ -69,20 +69,61 @@ function calculateResult() {
     hasDot = display.value.includes('.');
 }
 
+function animateButton(text) {
+    const buttons = document.querySelectorAll('.b');
+    for (let btn of buttons) {
+        if (btn.innerText === text) {
+            btn.classList.add('active');
+            break;
+        }
+    }
+}
+
 //function block end.
 
 //keydown block begin:
 
+document.addEventListener('keyup', (event) => {
+    const pressedButton = document.querySelector('.b.active');
+    if (pressedButton) {
+        pressedButton.classList.remove('active');
+    }
+});
+
 document.addEventListener('keydown', (event) => {
-    event.preventDefault();
     const key = event.key;
-    if (key >= '0' && key <= '9') appendNumber(key);
-    if (key === '+' || key === '-') appendOperator1(key);
-    if (key === '*' || key === '/' || key === '%') appendOperator2(key);
-    if (key === '.' || key === ',') appendOperator3('.');
-    if (key === 'Enter' || key === '=') calculateResult();
-    if (key === 'Backspace' || key === 'c') clearSingle();
-    if (key === 'Escape') clearDisplay();
+
+    if (key >= '0' && key <= '9') {
+        appendNumber(key);
+        animateButton(key);
+    }
+    if (key === '+' || key === '-') {
+        appendOperator1(key);
+        animateButton(key);
+    }
+    if (key === '*' || key === '/' || key === '%') {
+        event.preventDefault();
+        appendOperator2(key);
+        animateButton(key);
+    }
+    if (key === '.' || key === ',') {
+        appendOperator3('.');
+        animateButton('.');
+    }
+    if (key === 'Enter' || key === '=') {
+        event.preventDefault();
+        calculateResult();
+        animateButton('=');
+    }
+    if (key === 'Backspace' || key === 'c') {
+        clearSingle();
+        animateButton('C');
+    }
+    if (key === 'Escape') {
+        clearDisplay();
+        animateButton('AC');
+    }
+
 });
 
 //keydown block end.
